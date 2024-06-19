@@ -1,0 +1,78 @@
+{
+  "Lunar": {
+    "entityTypes": {
+      "Account": {
+        "shape": {
+          "type": "Record",
+          "attributes": {
+            "organisation": {
+              "type": "Entity",
+              "name": "Organisation",
+              "required": false
+            },
+            "owner": {
+              "type": "Entity",
+              "name": "User",
+              "required": false
+            }
+          }
+        }
+      },
+      "OrganisationParty": {
+        "shape": {
+          "type": "Record",
+          "attributes": {
+            "organisation": {
+              "type": "Entity",
+              "name": "Organisation",
+              "required": false
+            },
+            "roles": {
+              "type": "Set",
+              "element": {
+                "type": "String"
+              }
+            }
+          }
+        }
+      },
+      "User": {},
+      "Organisation": {}
+    },
+    "actions": {
+      "viewAccount": {
+        "appliesTo": {
+          "resourceTypes": [
+            "Account"
+          ],
+          "principalTypes": [
+            "User",
+            "OrganisationParty"
+          ]
+        }
+      },
+      "viewTransactions": {
+        "appliesTo": {
+          "resourceTypes": [
+            "Account"
+          ],
+          "principalTypes": [
+            "User",
+            "OrganisationParty"
+          ]
+        }
+      },
+      "transferMoney": {
+        "appliesTo": {
+          "resourceTypes": [
+            "Account"
+          ],
+          "principalTypes": [
+            "User",
+            "OrganisationParty"
+          ]
+        }
+      }
+    }
+  }
+}

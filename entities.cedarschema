@@ -1,0 +1,19 @@
+namespace Lunar {
+
+  entity User;
+  entity OrganisationParty = {
+    roles: Set<String>,
+    organisation?: Organisation
+  };
+  entity Organisation;
+  entity Account = {
+    owner?: User,
+    organisation?: Organisation,
+  };
+
+  action viewAccount,transferMoney,viewTransactions appliesTo {
+    principal: [User, OrganisationParty],
+    resource: Account,
+  };
+
+}

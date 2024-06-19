@@ -1,0 +1,45 @@
+[
+    {
+        "uid":  {
+            "type": "Lunar::User",
+            "id": "alice"
+        },
+        "attrs": {
+
+        },
+        "parents": []
+    },
+    {
+        "uid":  {
+            "type": "Lunar::OrganisationParty",
+            "id": "bob"
+        },
+        "attrs": {
+            "organisation": "aperture-science",
+            "roles": [ "coworker"]
+        },
+        "parents": []
+    },
+    {
+        "uid":  {
+            "type": "Lunar::OrganisationParty",
+            "id": "charlie"
+        },
+        "attrs": {
+            "organisation": "aperture-science",
+            "roles": ["owner"]
+        },
+        "parents": []
+    },
+    {
+        "uid":  {
+            "type": "Lunar::Organisation",
+            "id": "aperture-science"
+        },
+        "attrs": {
+
+        },
+        "parents": []
+    }
+
+]
